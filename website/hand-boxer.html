@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Annotator</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      border: 1px solid white;
+      cursor: crosshair;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Annotator</h1>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <button id="startButton">Start</button>
+  <button id="nextButton">Next</button>
+  <script>
+    let images = [];
+    let currentImageIndex = 0;
+    let points = [];
+
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const startButton = document.getElementById("startButton");
+    const nextButton = document.getElementById("nextButton");
+    
+    fetch("/get_images")
+      .then(response => response.json())
+      .then(data => {
+        images=data;
+        if(images.length < 1) {
+          alert("No images found in folder.");
+        }
+      })
+      .catch(error => console.error("Error loading images:", error));
+
+    function loadImage() {
+      if (currentImageIndex >= images.length) {
+        alert("Annotation complete!");
+        return;
+      }
+      points = [];
+      const img = new Image();
+      img.src = images[currentImageIndex];
+      img.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      };
+    }
+
+    canvas.addEventListener("click", (e) => {
+      if (points.length < 4) {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        points.push({ x, y });
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(x, y, 5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    });
+
+    nextButton.addEventListener("click", () => {
+      if (points.length === 4) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const annotation = {
+          image: images[currentImageIndex],
+          points: points
+        };
+
+        // Send data to Flask server to save it
+        fetch("/save_annotations", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(annotation),
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error("Error saving annotation:", error));
+
+        console.log(`Image: ${images[currentImageIndex]}, Points:`, points);
+        currentImageIndex++;
+        
+        if (currentImageIndex >= images.length) {
+          alert("Annotation complete! Data saved.");
+        } else {
+          loadImage();
+        }
+      } else {
+        alert("Please select all four points.");
+      }
+    });
+
+    startButton.addEventListener("click", () => {
+	loadImage();
+	startButton.disabled = true;
+    });
+
+  </script>
+</body>
+</html>
