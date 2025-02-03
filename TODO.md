@@ -21,3 +21,14 @@ Steps:
 
 2:
 A CNN that takes the hand image, and returns the number of digits held up
+
+
+FULL INPUT->OUTPUT MAP:
+
+Image of full body
+Model takes full image, produces coordinates for box around hand
+Function takes full image, box, produces smaller image
+Model takes smaller image, produces number of digits help up
+
+Methods needed for production input->output map:
+
