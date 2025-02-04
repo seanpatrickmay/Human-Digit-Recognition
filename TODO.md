@@ -30,5 +30,20 @@ Model takes full image, produces coordinates for box around hand
 Function takes full image, box, produces smaller image
 Model takes smaller image, produces number of digits help up
 
-Methods needed for production input->output map:
+Training Set Details:
+    Num. Of Hands (2) 
+    Num. Of Fingers (6)
+    Arbitrary num. of positions (9)
+    Num. of People (3)
+Total: 2 * 6 * 9 * 3 = 324 Unique Images
+Augmentation (Per Each):
+    Horizontal Flip (2)
+    Random Rotation, Scaling (3)
+    Random Brightness, Contrast, Saturation (3)
+    Random Noise (3)
+Total: 2 * 3 * 3 * 3 = 54 Multiples for each Image
+
+Final Total: 324 * 54 = 17496
+    
+    
 
