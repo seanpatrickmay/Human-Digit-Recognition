@@ -42,6 +42,3 @@ class ConvolutionalNeuralNetwork(nn.Module):
         x = self.flatten(x)
         logits = self.linear_stack(x)
         return logits
-
-class GenerationalNeuralNetwork(nn.Module):
-    

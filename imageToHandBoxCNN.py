@@ -3,7 +3,7 @@ import torch
 from torch import nn
 
 # This CNN is meant to take in an image, in which somewhere there will be a hand.
-# The output is 8 integers, representing x1 y1, ... , x4, y4 coordinates of a box.
+# The output is 4 integers, representing the top, bottom, left, right bounds of a box.
 # This box should surround the hand, simplifying the classification task for another CNN.
 class ConvolutionalNeuralNetwork(nn.Module):
     def __init__(self):
@@ -45,6 +45,3 @@ class ConvolutionalNeuralNetwork(nn.Module):
         x = self.flatten(x)
         logits = self.linear_stack(x)
         return logits
-
-class GenerationalNeuralNetwork(nn.Module):
-    
