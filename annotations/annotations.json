@@ -1,6 +1,6 @@
 [
   {
-    "image": "/data/FULL_IMAGES/test1.jpg",
+    "image": "test1.jpg",
     "points": [
       {
         "x": 89,
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "image": "/data/FULL_IMAGES/test2.jpg",
+    "image": "test2.jpg",
     "points": [
       {
         "x": 261,

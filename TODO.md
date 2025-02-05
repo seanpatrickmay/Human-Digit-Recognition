@@ -44,6 +44,3 @@ Augmentation (Per Each):
 Total: 2 * 3 * 3 * 3 = 54 Multiples for each Image
 
 Final Total: 324 * 54 = 17496
-    
-    
-
