@@ -19,9 +19,13 @@
       border: 1px solid white;
       cursor: crosshair;
     }
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
     button {
       margin-top: 10px;
-      padding: 10px;
+      padding: 20px;
       font-size: 16px;
     }
   </style>
@@ -29,17 +33,34 @@
 <body>
   <h1>Image Annotator</h1>
   <canvas id="canvas" width="500" height="500"></canvas>
-  <button id="startButton">Start</button>
-  <button id="nextButton">Next</button>
+  <div class="button-container">
+    <button id="zeroButton">0</button>
+    <button id="oneButton">1</button>
+    <button id="twoButton">2</button>
+    <button id="threeButton">3</button>
+    <button id="fourButton">4</button>
+    <button id="fiveButton">5</button>
+  </div>
+  <div class="button-container">
+    <button id="startButton">Start</button>
+    <button id="nextButton">Next</button>
+  </div>
   <script>
     let images = [];
     let currentImageIndex = 0;
     let points = [];
+    let currentClass = 0;
 
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     const startButton = document.getElementById("startButton");
     const nextButton = document.getElementById("nextButton");
+    const zeroButton = document.getElementById("zeroButton");
+    const oneButton = document.getElementById("oneButton");
+    const twoButton = document.getElementById("twoButton");
+    const threeButton = document.getElementById("threeButton");
+    const fourButton = document.getElementById("fourButton");
+    const fiveButton = document.getElementById("fiveButton");
     
     fetch("/get_images")
       .then(response => response.json())
@@ -83,7 +104,8 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         const annotation = {
-          image: images[currentImageIndex],
+          image: images[currentImageIndex].substring(images[currentImageIndex].lastIndexOf("/") + 1),
+	  class: currentClass,
           points: points
         };
 
@@ -115,6 +137,30 @@
     startButton.addEventListener("click", () => {
 	loadImage();
 	startButton.disabled = true;
+    });
+
+    zeroButton.addEventListener("click", () => {
+	currentClass = 0;
+    });
+	
+    oneButton.addEventListener("click", () => {
+	currentClass = 1;
+    });
+
+    twoButton.addEventListener("click", () => {
+	currentClass = 2;
+    });
+
+    threeButton.addEventListener("click", () => {
+	currentClass = 3;
+    });
+
+    fourButton.addEventListener("click", () => {
+	currentClass = 4;
+    });
+
+    fiveButton.addEventListener("click", () => {
+	currentClass = 5;
     });
 
   </script>
