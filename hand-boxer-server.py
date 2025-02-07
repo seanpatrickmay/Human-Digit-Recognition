@@ -30,8 +30,8 @@ def serve_custom_image(filename):
 # Storing data as (minx, maxx, miny, maxy)
 def normalize_json_points(points):
     points_list = points['points']
-    x_list = [point['x'] for point in points_list]
-    y_list = [point['y'] for point in points_list]
+    x_list = [math.ceil(point['x']) for point in points_list]
+    y_list = [math.ceil(point['y']) for point in points_list]
     points['points'] = {'x_min': min(x_list), 'x_max': max(x_list), 'y_min': min(y_list), 'y_max': max(y_list)}
     return points
     

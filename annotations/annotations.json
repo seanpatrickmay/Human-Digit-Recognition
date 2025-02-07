@@ -1,44 +1,72 @@
 [
   {
-    "image": "test1.jpg",
-    "points": [
-      {
-        "x": 89,
-        "y": 314
-      },
-      {
-        "x": 245,
-        "y": 314
-      },
-      {
-        "x": 89,
-        "y": 473
-      },
-      {
-        "x": 245,
-        "y": 473
-      }
-    ]
+    "image": "twoptopright.jpg",
+    "class": 2,
+    "points": {
+      "x_min": 242,
+      "x_max": 359,
+      "y_min": 31,
+      "y_max": 266
+    }
   },
   {
-    "image": "test2.jpg",
-    "points": [
-      {
-        "x": 261,
-        "y": 108
-      },
-      {
-        "x": 404,
-        "y": 108
-      },
-      {
-        "x": 261,
-        "y": 299
-      },
-      {
-        "x": 404,
-        "y": 299
-      }
-    ]
+    "image": "twotopleft.jpg",
+    "class": 2,
+    "points": {
+      "x_min": 56,
+      "x_max": 175,
+      "y_min": 36,
+      "y_max": 285
+    }
+  },
+  {
+    "image": "onebottomright.jpg",
+    "class": 1,
+    "points": {
+      "x_min": 231,
+      "x_max": 357,
+      "y_min": 181,
+      "y_max": 406
+    }
+  },
+  {
+    "image": "onebottomleft.jpg",
+    "class": 1,
+    "points": {
+      "x_min": 62,
+      "x_max": 198,
+      "y_min": 214,
+      "y_max": 437
+    }
+  },
+  {
+    "image": "twomiddle.jpg",
+    "class": 2,
+    "points": {
+      "x_min": 149,
+      "x_max": 302,
+      "y_min": 162,
+      "y_max": 400
+    }
+  },
+  {
+    "image": "onetopleft.jpg",
+    "class": 1,
+    "points": {
+      "x_min": 37,
+      "x_max": 158,
+      "y_min": 26,
+      "y_max": 228
+    }
+  },
+  {
+    "image": "onetopright.jpg",
+    "class": 1,
+    "points": {
+      "x_min": 245,
+      "x_max": 365,
+      "y_min": 30,
+      "y_max": 216
+    }
   }
 ]
