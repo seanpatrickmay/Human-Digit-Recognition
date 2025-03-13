@@ -1,72 +1,1122 @@
 [
   {
-    "image": "twoptopright.jpg",
+    "image": "IMG_8540.jpeg",
     "class": 2,
     "points": {
-      "x_min": 242,
-      "x_max": 359,
-      "y_min": 31,
+      "x_min": 301,
+      "x_max": 448,
+      "y_min": 186,
+      "y_max": 355
+    }
+  },
+  {
+    "image": "IMG_8517.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 271,
+      "x_max": 452,
+      "y_min": 59,
+      "y_max": 259
+    }
+  },
+  {
+    "image": "IMG_8501.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 137,
+      "x_max": 398,
+      "y_min": 202,
+      "y_max": 416
+    }
+  },
+  {
+    "image": "IMG_8556.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 27,
+      "x_max": 242,
+      "y_min": 92,
+      "y_max": 267
+    }
+  },
+  {
+    "image": "IMG_8487.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 64,
+      "x_max": 241,
+      "y_min": 313,
+      "y_max": 489
+    }
+  },
+  {
+    "image": "IMG_8583.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 140,
+      "x_max": 312,
+      "y_min": 145,
+      "y_max": 288
+    }
+  },
+  {
+    "image": "IMG_8491.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 33,
+      "x_max": 278,
+      "y_min": 323,
+      "y_max": 495
+    }
+  },
+  {
+    "image": "IMG_8521.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 226,
+      "x_max": 489,
+      "y_min": 72,
+      "y_max": 278
+    }
+  },
+  {
+    "image": "IMG_8576.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 33,
+      "x_max": 205,
+      "y_min": 190,
+      "y_max": 343
+    }
+  },
+  {
+    "image": "IMG_8560.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 255,
+      "x_max": 471,
+      "y_min": 292,
+      "y_max": 484
+    }
+  },
+  {
+    "image": "IMG_8537.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 99,
+      "x_max": 298,
+      "y_min": 150,
+      "y_max": 368
+    }
+  },
+  {
+    "image": "IMG_8536.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 64,
+      "x_max": 226,
+      "y_min": 157,
+      "y_max": 346
+    }
+  },
+  {
+    "image": "IMG_8561.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 211,
+      "x_max": 416,
+      "y_min": 296,
+      "y_max": 473
+    }
+  },
+  {
+    "image": "IMG_8577.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 274,
+      "x_max": 422,
+      "y_min": 235,
+      "y_max": 339
+    }
+  },
+  {
+    "image": "IMG_8520.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 234,
+      "x_max": 480,
+      "y_min": 63,
+      "y_max": 276
+    }
+  },
+  {
+    "image": "IMG_8490.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 68,
+      "x_max": 270,
+      "y_min": 312,
+      "y_max": 497
+    }
+  },
+  {
+    "image": "IMG_8582.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 78,
+      "x_max": 245,
+      "y_min": 172,
+      "y_max": 318
+    }
+  },
+  {
+    "image": "IMG_8486.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 56,
+      "x_max": 215,
+      "y_min": 325,
+      "y_max": 498
+    }
+  },
+  {
+    "image": "IMG_8557.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 40,
+      "x_max": 267,
+      "y_min": 164,
+      "y_max": 345
+    }
+  },
+  {
+    "image": "IMG_8500.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 181,
+      "x_max": 392,
+      "y_min": 213,
+      "y_max": 418
+    }
+  },
+  {
+    "image": "IMG_8516.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 127,
+      "x_max": 385,
+      "y_min": 68,
+      "y_max": 303
+    }
+  },
+  {
+    "image": "IMG_8541.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 256,
+      "x_max": 421,
+      "y_min": 46,
+      "y_max": 248
+    }
+  },
+  {
+    "image": "IMG_8527.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 264,
+      "x_max": 451,
+      "y_min": 173,
+      "y_max": 403
+    }
+  },
+  {
+    "image": "IMG_8570.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 107,
+      "x_max": 332,
+      "y_min": 98,
+      "y_max": 275
+    }
+  },
+  {
+    "image": "IMG_8589.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 311,
+      "x_max": 463,
+      "y_min": 282,
+      "y_max": 418
+    }
+  },
+  {
+    "image": "IMG_8566.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 192,
+      "x_max": 479,
+      "y_min": 171,
+      "y_max": 391
+    }
+  },
+  {
+    "image": "IMG_8531.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 99,
+      "x_max": 274,
+      "y_min": 89,
+      "y_max": 259
+    }
+  },
+  {
+    "image": "IMG_8546.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 285,
+      "x_max": 460,
+      "y_min": 275,
+      "y_max": 481
+    }
+  },
+  {
+    "image": "IMG_8511.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 11,
+      "x_max": 271,
+      "y_min": 53,
+      "y_max": 276
+    }
+  },
+  {
+    "image": "IMG_8507.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 36,
+      "x_max": 191,
+      "y_min": 65,
+      "y_max": 226
+    }
+  },
+  {
+    "image": "IMG_8550.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 15,
+      "x_max": 204,
+      "y_min": 175,
+      "y_max": 377
+    }
+  },
+  {
+    "image": "IMG_8481.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 205,
+      "x_max": 357,
+      "y_min": 299,
+      "y_max": 476
+    }
+  },
+  {
+    "image": "IMG_8593.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 147,
+      "x_max": 307,
+      "y_min": 239,
+      "y_max": 370
+    }
+  },
+  {
+    "image": "IMG_8585.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 303,
+      "x_max": 444,
+      "y_min": 93,
+      "y_max": 225
+    }
+  },
+  {
+    "image": "IMG_8478.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 307,
+      "x_max": 444,
+      "y_min": 308,
+      "y_max": 482
+    }
+  },
+  {
+    "image": "IMG_8497.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 157,
+      "x_max": 332,
+      "y_min": 215,
+      "y_max": 411
+    }
+  },
+  {
+    "image": "IMG_8479.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 291,
+      "x_max": 469,
+      "y_min": 312,
+      "y_max": 493
+    }
+  },
+  {
+    "image": "IMG_8496.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 271,
+      "x_max": 497,
+      "y_min": 218,
+      "y_max": 408
+    }
+  },
+  {
+    "image": "IMG_8584.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 318,
+      "x_max": 480,
+      "y_min": 190,
+      "y_max": 319
+    }
+  },
+  {
+    "image": "IMG_8592.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 87,
+      "x_max": 256,
+      "y_min": 153,
+      "y_max": 291
+    }
+  },
+  {
+    "image": "IMG_8480.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 243,
+      "x_max": 491,
+      "y_min": 286,
+      "y_max": 484
+    }
+  },
+  {
+    "image": "IMG_8551.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 38,
+      "x_max": 226,
+      "y_min": 69,
+      "y_max": 263
+    }
+  },
+  {
+    "image": "IMG_8506.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 30,
+      "x_max": 265,
+      "y_min": 210,
+      "y_max": 423
+    }
+  },
+  {
+    "image": "IMG_8510.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 9,
+      "x_max": 222,
+      "y_min": 47,
+      "y_max": 257
+    }
+  },
+  {
+    "image": "IMG_8547.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 293,
+      "x_max": 463,
+      "y_min": 251,
+      "y_max": 435
+    }
+  },
+  {
+    "image": "IMG_8530.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 179,
+      "x_max": 308,
+      "y_min": 119,
+      "y_max": 272
+    }
+  },
+  {
+    "image": "IMG_8588.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 146,
+      "x_max": 283,
+      "y_min": 295,
+      "y_max": 420
+    }
+  },
+  {
+    "image": "IMG_8567.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 252,
+      "x_max": 482,
+      "y_min": 183,
+      "y_max": 345
+    }
+  },
+  {
+    "image": "IMG_8571.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 119,
+      "x_max": 330,
+      "y_min": 95,
+      "y_max": 258
+    }
+  },
+  {
+    "image": "IMG_8533.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 275,
+      "x_max": 454,
+      "y_min": 323,
+      "y_max": 500
+    }
+  },
+  {
+    "image": "IMG_8499.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 172,
+      "x_max": 335,
+      "y_min": 225,
+      "y_max": 417
+    }
+  },
+  {
+    "image": "IMG_8476.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 299,
+      "x_max": 464,
+      "y_min": 306,
+      "y_max": 481
+    }
+  },
+  {
+    "image": "IMG_8564.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 92,
+      "x_max": 353,
+      "y_min": 265,
+      "y_max": 465
+    }
+  },
+  {
+    "image": "IMG_8572.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 197,
+      "x_max": 454,
+      "y_min": 20,
+      "y_max": 212
+    }
+  },
+  {
+    "image": "IMG_8509.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 33,
+      "x_max": 192,
+      "y_min": 54,
+      "y_max": 237
+    }
+  },
+  {
+    "image": "IMG_8548.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 221,
+      "x_max": 403,
+      "y_min": 214,
+      "y_max": 382
+    }
+  },
+  {
+    "image": "IMG_8495.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 269,
+      "x_max": 490,
+      "y_min": 220,
+      "y_max": 415
+    }
+  },
+  {
+    "image": "IMG_8568.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 193,
+      "x_max": 396,
+      "y_min": 193,
+      "y_max": 350
+    }
+  },
+  {
+    "image": "IMG_8587.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 105,
+      "x_max": 230,
+      "y_min": 244,
+      "y_max": 366
+    }
+  },
+  {
+    "image": "IMG_8591.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 123,
+      "x_max": 252,
+      "y_min": 72,
+      "y_max": 199
+    }
+  },
+  {
+    "image": "IMG_8529.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 239,
+      "x_max": 382,
+      "y_min": 114,
+      "y_max": 271
+    }
+  },
+  {
+    "image": "IMG_8483.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 196,
+      "x_max": 355,
+      "y_min": 302,
+      "y_max": 494
+    }
+  },
+  {
+    "image": "IMG_8552.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 208,
+      "x_max": 396,
+      "y_min": 118,
+      "y_max": 305
+    }
+  },
+  {
+    "image": "IMG_8505.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 21,
+      "x_max": 229,
+      "y_min": 209,
+      "y_max": 424
+    }
+  },
+  {
+    "image": "IMG_8513.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 134,
+      "x_max": 321,
+      "y_min": 48,
+      "y_max": 269
+    }
+  },
+  {
+    "image": "IMG_8544.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 85,
+      "x_max": 251,
+      "y_min": 275,
+      "y_max": 452
+    }
+  },
+  {
+    "image": "IMG_8545.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 143,
+      "x_max": 335,
+      "y_min": 286,
+      "y_max": 491
+    }
+  },
+  {
+    "image": "IMG_8512.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 117,
+      "x_max": 299,
+      "y_min": 57,
+      "y_max": 254
+    }
+  },
+  {
+    "image": "IMG_8504.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 47,
+      "x_max": 226,
+      "y_min": 216,
+      "y_max": 430
+    }
+  },
+  {
+    "image": "IMG_8553.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 314,
+      "x_max": 490,
+      "y_min": 83,
+      "y_max": 273
+    }
+  },
+  {
+    "image": "IMG_8528.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 207,
+      "x_max": 406,
+      "y_min": 47,
+      "y_max": 281
+    }
+  },
+  {
+    "image": "IMG_8482.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 174,
+      "x_max": 338,
+      "y_min": 306,
+      "y_max": 498
+    }
+  },
+  {
+    "image": "IMG_8590.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 277,
+      "x_max": 432,
+      "y_min": 183,
+      "y_max": 292
+    }
+  },
+  {
+    "image": "IMG_8569.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 39,
+      "x_max": 280,
+      "y_min": 167,
+      "y_max": 346
+    }
+  },
+  {
+    "image": "IMG_8586.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 39,
+      "x_max": 221,
+      "y_min": 130,
+      "y_max": 253
+    }
+  },
+  {
+    "image": "IMG_8494.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 301,
+      "x_max": 478,
+      "y_min": 192,
+      "y_max": 415
+    }
+  },
+  {
+    "image": "IMG_8549.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 122,
+      "x_max": 302,
+      "y_min": 181,
+      "y_max": 342
+    }
+  },
+  {
+    "image": "IMG_8508.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 33,
+      "x_max": 201,
+      "y_min": 55,
+      "y_max": 242
+    }
+  },
+  {
+    "image": "IMG_8573.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 255,
+      "x_max": 418,
+      "y_min": 274,
+      "y_max": 390
+    }
+  },
+  {
+    "image": "IMG_8565.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 201,
+      "x_max": 488,
+      "y_min": 270,
+      "y_max": 486
+    }
+  },
+  {
+    "image": "IMG_8532.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 126,
+      "x_max": 310,
+      "y_min": 22,
+      "y_max": 239
+    }
+  },
+  {
+    "image": "IMG_8498.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 161,
+      "x_max": 332,
+      "y_min": 217,
+      "y_max": 423
+    }
+  },
+  {
+    "image": "IMG_8477.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 278,
+      "x_max": 477,
+      "y_min": 283,
+      "y_max": 490
+    }
+  },
+  {
+    "image": "IMG_8493.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 306,
+      "x_max": 481,
+      "y_min": 201,
+      "y_max": 408
+    }
+  },
+  {
+    "image": "IMG_8539.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 313,
+      "x_max": 496,
+      "y_min": 141,
+      "y_max": 330
+    }
+  },
+  {
+    "image": "IMG_8581.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 62,
+      "x_max": 227,
+      "y_min": 252,
+      "y_max": 399
+    }
+  },
+  {
+    "image": "IMG_8485.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 141,
+      "x_max": 405,
+      "y_min": 320,
+      "y_max": 497
+    }
+  },
+  {
+    "image": "IMG_8554.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 252,
+      "x_max": 476,
+      "y_min": 100,
+      "y_max": 294
+    }
+  },
+  {
+    "image": "IMG_8503.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 33,
+      "x_max": 209,
+      "y_min": 206,
+      "y_max": 418
+    }
+  },
+  {
+    "image": "IMG_8515.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 119,
+      "x_max": 331,
+      "y_min": 81,
+      "y_max": 284
+    }
+  },
+  {
+    "image": "IMG_8542.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 180,
+      "x_max": 338,
+      "y_min": 116,
       "y_max": 266
     }
   },
   {
-    "image": "twotopleft.jpg",
+    "image": "IMG_8535.jpeg",
     "class": 2,
     "points": {
-      "x_min": 56,
-      "x_max": 175,
-      "y_min": 36,
-      "y_max": 285
+      "x_min": 119,
+      "x_max": 292,
+      "y_min": 300,
+      "y_max": 473
     }
   },
   {
-    "image": "onebottomright.jpg",
-    "class": 1,
+    "image": "IMG_8562.jpeg",
+    "class": 4,
     "points": {
-      "x_min": 231,
-      "x_max": 357,
-      "y_min": 181,
-      "y_max": 406
+      "x_min": 63,
+      "x_max": 275,
+      "y_min": 273,
+      "y_max": 450
     }
   },
   {
-    "image": "onebottomleft.jpg",
-    "class": 1,
+    "image": "IMG_8574.jpeg",
+    "class": 0,
     "points": {
-      "x_min": 62,
-      "x_max": 198,
-      "y_min": 214,
-      "y_max": 437
+      "x_min": 174,
+      "x_max": 329,
+      "y_min": 260,
+      "y_max": 388
     }
   },
   {
-    "image": "twomiddle.jpg",
+    "image": "IMG_8489.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 72,
+      "x_max": 226,
+      "y_min": 327,
+      "y_max": 498
+    }
+  },
+  {
+    "image": "IMG_8558.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 55,
+      "x_max": 263,
+      "y_min": 195,
+      "y_max": 378
+    }
+  },
+  {
+    "image": "IMG_8519.jpeg",
+    "class": 3,
+    "points": {
+      "x_min": 271,
+      "x_max": 459,
+      "y_min": 74,
+      "y_max": 301
+    }
+  },
+  {
+    "image": "IMG_8518.jpeg",
     "class": 2,
     "points": {
-      "x_min": 149,
-      "x_max": 302,
-      "y_min": 162,
-      "y_max": 400
+      "x_min": 279,
+      "x_max": 470,
+      "y_min": 53,
+      "y_max": 276
     }
   },
   {
-    "image": "onetopleft.jpg",
-    "class": 1,
+    "image": "IMG_8559.jpeg",
+    "class": 4,
     "points": {
-      "x_min": 37,
-      "x_max": 158,
-      "y_min": 26,
-      "y_max": 228
+      "x_min": 219,
+      "x_max": 428,
+      "y_min": 191,
+      "y_max": 393
     }
   },
   {
-    "image": "onetopright.jpg",
+    "image": "IMG_8488.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 95,
+      "x_max": 254,
+      "y_min": 316,
+      "y_max": 496
+    }
+  },
+  {
+    "image": "IMG_8575.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 82,
+      "x_max": 261,
+      "y_min": 261,
+      "y_max": 402
+    }
+  },
+  {
+    "image": "IMG_8563.jpeg",
+    "class": 5,
+    "points": {
+      "x_min": 27,
+      "x_max": 290,
+      "y_min": 254,
+      "y_max": 436
+    }
+  },
+  {
+    "image": "IMG_8534.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 206,
+      "x_max": 377,
+      "y_min": 289,
+      "y_max": 477
+    }
+  },
+  {
+    "image": "IMG_8543.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 88,
+      "x_max": 250,
+      "y_min": 88,
+      "y_max": 236
+    }
+  },
+  {
+    "image": "IMG_8514.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 101,
+      "x_max": 344,
+      "y_min": 73,
+      "y_max": 275
+    }
+  },
+  {
+    "image": "IMG_8502.jpeg",
     "class": 1,
     "points": {
-      "x_min": 245,
-      "x_max": 365,
-      "y_min": 30,
-      "y_max": 216
+      "x_min": 21,
+      "x_max": 184,
+      "y_min": 224,
+      "y_max": 415
+    }
+  },
+  {
+    "image": "IMG_8555.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 115,
+      "x_max": 297,
+      "y_min": 104,
+      "y_max": 268
+    }
+  },
+  {
+    "image": "IMG_8484.jpeg",
+    "class": 4,
+    "points": {
+      "x_min": 172,
+      "x_max": 404,
+      "y_min": 316,
+      "y_max": 496
+    }
+  },
+  {
+    "image": "IMG_8579.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 248,
+      "x_max": 397,
+      "y_min": 279,
+      "y_max": 393
+    }
+  },
+  {
+    "image": "IMG_8580.jpeg",
+    "class": 0,
+    "points": {
+      "x_min": 190,
+      "x_max": 349,
+      "y_min": 268,
+      "y_max": 386
+    }
+  },
+  {
+    "image": "IMG_8492.jpeg",
+    "class": 1,
+    "points": {
+      "x_min": 302,
+      "x_max": 447,
+      "y_min": 208,
+      "y_max": 396
+    }
+  },
+  {
+    "image": "IMG_8538.jpeg",
+    "class": 2,
+    "points": {
+      "x_min": 242,
+      "x_max": 448,
+      "y_min": 150,
+      "y_max": 396
     }
   }
 ]

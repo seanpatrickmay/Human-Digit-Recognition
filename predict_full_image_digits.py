@@ -2,16 +2,16 @@ import numpy as np
 import sys
 import torch
 from torchvision.transforms import ToTensor
-from imageToHandBoxCNN import ImageToHandBoxCNN
-from handToDigitsCNN import HandToDigitsCNN
+from models/imageToHandBoxCNN import ImageToHandBoxCNN
+from models/handToDigitsCNN import HandToDigitsCNN
 from PIL import Image
 import base64
 import io
 import torch
 import torchvision.transforms as transforms
 
-HAND_TO_DIGITS_MODEL_PATH = "handToDigits_model.pth"
-IMAGE_TO_HAND_BOX_MODEL_PATH = "imageToHandBox_model.pth"
+HAND_TO_DIGITS_MODEL_PATH = "models/handToDigits_model.pth"
+IMAGE_TO_HAND_BOX_MODEL_PATH = "models/imageToHandBox_model.pth"
 
 BOUND_X_MAX = 512
 BOUND_Y_MAX = 512
