@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finger Count Predictor</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    video, canvas {
+      border: 1px solid white;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .prediction {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Finger Count Predictor</h1>
+  <video id="webcam" autoplay playsinline width="500" height="375"></video>
+  <canvas id="canvas" width="500" height="375" style="display:none;"></canvas>
+  <button id="captureButton">Capture Image</button>
+  <div class="prediction" id="predictionResult">Prediction: </div>
+
+  <script>
+    const video = document.getElementById("webcam");
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const captureButton = document.getElementById("captureButton");
+    const predictionResult = document.getElementById("predictionResult");
+
+    // Access the webcam
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then((stream) => {
+        video.srcObject = stream;
+      })
+      .catch((error) => {
+        console.error("Error accessing the webcam:", error);
+      });
+
+    // Capture image from the webcam
+    captureButton.addEventListener("click", () => {
+      // Draw the current video frame onto the canvas
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Convert the canvas image to a data URL (base64)
+      const imageData = canvas.toDataURL("image/jpeg");
+
+      // Send the image data to the Flask backend
+      fetch("/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ image: imageData }),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        // Display the prediction result
+        predictionResult.textContent = `Prediction: ${data.prediction}`;
+      })
+      .catch((error) => {
+        console.error("Error sending image to backend:", error);
+      });
+    });
+  </script>
+</body>
+</html>

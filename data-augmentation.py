@@ -57,8 +57,15 @@ def crop_dataset():
         image_path = os.path.join(PATH_TO_AUGMENTED_IMAGES, annotation['image'])
         image = cv2.imread(image_path)
 
-        bounds  = points_to_bounds(annotation['points'])
+        bounds = points_to_bounds(annotation['points'])
         cropped_image = crop_image(image, bounds)
+
+        resizeTransform = A.Compose([
+            A.Resize(height=256, width=128)
+            ], bbox_params=A.BboxParams(format='pascal_voc', label_fields=['class_labels']))
+
+        #cropped_image = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2RGB)
+        cropped_image, bounds = transform_image_and_annotation(cropped_image, [0, 0, 1, 1], resizeTransform)
 
         output_image_name = annotation['image'][:-4] + "_cropped.jpg"
         output_image_path = os.path.join(CROPPED_OUTPUT_PATH, output_image_name)
@@ -89,6 +96,10 @@ def augment_dataset():
 
     noiseTransform = A.Compose([
         A.GaussNoise(var_limit=(10, 50), p=1)
+        ], bbox_params=A.BboxParams(format='pascal_voc', label_fields=['class_labels']))
+
+    resizeTransform = A.Compose([
+        A.Resize(height=512, width=512)
         ], bbox_params=A.BboxParams(format='pascal_voc', label_fields=['class_labels']))
 
     augmented_annotations = []
@@ -126,16 +137,20 @@ def augment_dataset():
                     for noise in range(3):
                         #print("Changing noise now!")
                         final_image, final_bounds = transform_image_and_annotation(BCS_image, BCS_bounds, noiseTransform)
-                        final_bounds = [math.ceil(bound) for bound in final_bounds]
+
+                        resized_final_image, resized_final_bounds = transform_image_and_annotation(final_image, final_bounds, resizeTransform)
+                        resized_final_bounds = [math.ceil(bound) for bound in resized_final_bounds]
 
                         output_image_name = f"{annotation['image'][:-4]}_aug_{len(augmented_annotations)}.jpg"
                         output_image_path = os.path.join(OUTPUT_PATH, output_image_name)
-                        cv2.imwrite(output_image_path, cv2.cvtColor(final_image, cv2.COLOR_RGB2BGR))
+                        cv2.imwrite(output_image_path, cv2.cvtColor(resized_final_image, cv2.COLOR_RGB2BGR))
 
                         augmented_annotation = deepcopy(annotation)
                         augmented_annotation['image'] = output_image_name
-                        augmented_annotation['points'] = bounds_to_points(final_bounds)
+                        augmented_annotation['points'] = bounds_to_points(resized_final_bounds)
                         augmented_annotations.append(augmented_annotation)
+                        
+                        
 
     save_annotations(augmented_annotations, os.path.join(OUTPUT_PATH, 'augmented_annotations.json'))
 

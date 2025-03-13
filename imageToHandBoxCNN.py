@@ -3,45 +3,57 @@ import torch
 from torch import nn
 
 # This CNN is meant to take in an image, in which somewhere there will be a hand.
-# The output is 4 integers, representing the top, bottom, left, right bounds of a box.
+# The output is 4 integers, representing the left, top, right, and bottom of a box.
 # This box should surround the hand, simplifying the classification task for another CNN.
-class ConvolutionalNeuralNetwork(nn.Module):
+class ImageToHandBoxCNN(nn.Module):
     def __init__(self):
         super().__init__()
         self.flatten = nn.Flatten()
         self.convolutional_relu_stack = nn.Sequential(
-            nn.Conv2d(in_channels=1, out_channels=4, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.Conv2d(in_channels=4, out_channels=16, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.Conv2d(in_channels=16, out_channels=64, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.Conv2d(in_channels=64, out_channels=256, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
+                nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1),
+                nn.ReLU(),
+                nn.BatchNorm2d(64),
+                nn.MaxPool2d(kernel_size=2, stride=2),
+
+                nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=1),
+                nn.ReLU(),
+                nn.BatchNorm2d(128),
+                nn.MaxPool2d(kernel_size=2, stride=2),
+
+                nn.Conv2d(128, 256, kernel_size=3, stride=1, padding=1),
+                nn.ReLU(),
+                nn.BatchNorm2d(256),
+                nn.MaxPool2d(kernel_size=2, stride=2),
+
+                nn.Conv2d(256, 512, kernel_size=3, stride=1, padding=1),
+                nn.ReLU(),
+                nn.BatchNorm2d(512),
+                nn.MaxPool2d(kernel_size=2, stride=2)
         )
 
         self.linear_stack = nn.Sequential(
-            nn.Linear(7 * 7 * 256, 4096),
+            nn.Linear(512 * 32 * 32, 1024),
             nn.ReLU(),
-            nn.Linear(4096, 2048),
-            nn.ReLU(),
-            nn.Linear(2048, 1024),
-            nn.ReLU(),
+            nn.Dropout(0.3),
+
             nn.Linear(1024, 512),
             nn.ReLU(),
-            nn.Linear(512, 256),
-            nn.ReLU(),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU(),
-            nn.Linear(64, 10),
+            nn.Dropout(0.3),
+
+            nn.Linear(512, 4)
         )
 
     def forward(self, x):
         x = self.convolutional_relu_stack(x)
         x = self.flatten(x)
         logits = self.linear_stack(x)
-        return logits
+
+        x1, y1, x2, y2 = logits[:, 0], logits[:, 1], logits[:, 2], logits[:, 3]
+        #print(x1, y1, x2, y2)
+
+        #x1 = torch.sigmoid(x1) * 512
+        #y1 = torch.sigmoid(y1) * 512
+        x2 = x1 + torch.exp(x2)
+        y2 = y1 + torch.exp(y2)
+
+        return torch.stack([x1, y1, x2, y2], dim=1)
