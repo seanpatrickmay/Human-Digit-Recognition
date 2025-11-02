@@ -1,20 +1,21 @@
 import numpy as np
-import sys
+import os
 import torch
-from torchvision.transforms import ToTensor
-from models/imageToHandBoxCNN import ImageToHandBoxCNN
-from models/handToDigitsCNN import HandToDigitsCNN
+from models import imageToHandBoxCNN
+from models import handToDigitsCNN
 from PIL import Image
 import base64
 import io
-import torch
 import torchvision.transforms as transforms
 
-HAND_TO_DIGITS_MODEL_PATH = "models/handToDigits_model.pth"
-IMAGE_TO_HAND_BOX_MODEL_PATH = "models/imageToHandBox_model.pth"
-
-BOUND_X_MAX = 512
-BOUND_Y_MAX = 512
+# Model and preprocessing configuration constants
+HAND_TO_DIGITS_MODEL_PATH = os.getenv("HAND_TO_DIGITS_MODEL_PATH", "models/handToDigits_model.pth")
+IMAGE_TO_HAND_BOX_MODEL_PATH = os.getenv("IMAGE_TO_HAND_BOX_MODEL_PATH", "models/imageToHandBox_model.pth")
+FULL_IMAGE_SIZE = (512, 512)
+CROPPED_HAND_SIZE = (256, 128)
+FULL_IMAGE_WIDTH, FULL_IMAGE_HEIGHT = FULL_IMAGE_SIZE
+BOUND_X_MAX = FULL_IMAGE_WIDTH
+BOUND_Y_MAX = FULL_IMAGE_HEIGHT
 
 # Set device
 device = (
@@ -27,12 +28,12 @@ device = (
 
 # Set up models, load weights, set to eval mode
 # First model, which gives points to crop large image to get just the hand
-IMAGE_TO_HAND_BOX_MODEL = ImageToHandBoxCNN().to(device) 
+IMAGE_TO_HAND_BOX_MODEL = imageToHandBoxCNN.ImageToHandBoxCNN().to(device) 
 IMAGE_TO_HAND_BOX_MODEL.load_state_dict(torch.load(IMAGE_TO_HAND_BOX_MODEL_PATH, weights_only=False))
 IMAGE_TO_HAND_BOX_MODEL.eval()
 
 # Second model, which gives how many fingers are raised on the smaller, hand image
-HAND_TO_DIGITS_MODEL = HandToDigitsCNN().to(device)
+HAND_TO_DIGITS_MODEL = handToDigitsCNN.HandToDigitsCNN().to(device)
 HAND_TO_DIGITS_MODEL.load_state_dict(torch.load(HAND_TO_DIGITS_MODEL_PATH, weights_only=False))
 HAND_TO_DIGITS_MODEL.eval()
 
@@ -44,6 +45,7 @@ def model_predict(model, input_tensor):
 
 def normalize_bounds(bounds):
     x_min, y_min, x_max, y_max = bounds[0]
+    # Constrain predicted coordinates to remain inside the resized frame
     normalized_bounds = [max(0, x_min), max(0, y_min), min(BOUND_X_MAX, x_max), min(BOUND_Y_MAX, y_max)]
     return normalized_bounds
 
@@ -68,17 +70,18 @@ def process_full_image(full_image_data):
     image_data = full_image_data["image"].split(",")[1]
     image_bytes = base64.b64decode(image_data)
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    image = image.resize((512, 512))
+    image = image.resize(FULL_IMAGE_SIZE)
     return image
 
 # Method to crop an image, given bounds for x and y
 # Filler for now XXXXXXXXXX
 def crop_image(full_image, bounds):
-    bounds = [bound * 512 for bound in bounds]
+    scale_factors = [FULL_IMAGE_WIDTH, FULL_IMAGE_HEIGHT, FULL_IMAGE_WIDTH, FULL_IMAGE_HEIGHT]
+    bounds = [bound * scale for bound, scale in zip(bounds, scale_factors)]
     print(bounds)
     cropped_image = full_image.crop(bounds)
     print(cropped_image)
-    cropped_image = cropped_image.resize((256, 128))
+    cropped_image = cropped_image.resize(CROPPED_HAND_SIZE)
 
     transform = transforms.Compose([
         transforms.ToTensor(),
