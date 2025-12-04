@@ -8,12 +8,12 @@ from copy import deepcopy
 # This python script is to augment the original full pictures I have
 # The purpose is to artificially increase the data set size.
 
-PATH_TO_IMAGES = "data/FULL_IMAGES"
+PATH_TO_IMAGES = "Data/FULL_IMAGES"
 PATH_TO_ANNOTATIONS = "annotations/annotations.json"
-PATH_TO_AUGMENTED_IMAGES = "data/AUGMENTED_IMAGES"
-PATH_TO_AUGMENTED_ANNOTATIONS = "data/AUGMENTED_IMAGES/augmented_annotations.json"
-OUTPUT_PATH = "data/AUGMENTED_IMAGES"
-CROPPED_OUTPUT_PATH = "data/CROPPED_IMAGES"
+PATH_TO_AUGMENTED_IMAGES = "Data/AUGMENTED_IMAGES"
+PATH_TO_AUGMENTED_ANNOTATIONS = "Data/AUGMENTED_IMAGES/augmented_annotations.json"
+OUTPUT_PATH = "Data/AUGMENTED_IMAGES"
+CROPPED_OUTPUT_PATH = "Data/CROPPED_IMAGES"
 
 def load_annotations(path):
     with open(path, 'r') as f:

@@ -3,8 +3,7 @@ import torch
 from torch import nn
 
 # This CNN is meant to take in an image, in which somewhere there will be a hand.
-# The output is 4 integers, representing the top, bottom, left, right bounds of a box.
-# This box should surround the hand, simplifying the classification task for another CNN.
+# The output logits contain hand box coordinates and any additional outputs used during training.
 class ConvolutionalNeuralNetwork(nn.Module):
     def __init__(self):
         super().__init__()
@@ -45,3 +44,8 @@ class ConvolutionalNeuralNetwork(nn.Module):
         x = self.flatten(x)
         logits = self.linear_stack(x)
         return logits
+
+
+class ImageToHandBoxCNN(ConvolutionalNeuralNetwork):
+    def __init__(self):
+        super().__init__()

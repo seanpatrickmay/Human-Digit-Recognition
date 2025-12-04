@@ -1,8 +1,8 @@
 import os
 from PIL import Image
 
-FOLDER_PATH = "data/ORIGINAL_IMAGES"
-OUTPUT_PATH = "data/FULL_IMAGES"
+FOLDER_PATH = "Data/ORIGINAL_IMAGES"
+OUTPUT_PATH = "Data/FULL_IMAGES"
 
 def resize_images(folder_path, size=(500, 500)):
     if not os.path.exists(folder_path):

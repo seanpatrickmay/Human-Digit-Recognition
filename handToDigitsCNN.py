@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from torch import nn
 
+
 class ConvolutionalNeuralNetwork(nn.Module):
     def __init__(self):
         super().__init__()
@@ -42,3 +43,8 @@ class ConvolutionalNeuralNetwork(nn.Module):
         x = self.flatten(x)
         logits = self.linear_stack(x)
         return logits
+
+
+class HandToDigitsCNN(ConvolutionalNeuralNetwork):
+    def __init__(self):
+        super().__init__()

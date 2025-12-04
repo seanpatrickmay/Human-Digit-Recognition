@@ -28,10 +28,19 @@
       padding: 20px;
       font-size: 16px;
     }
+    .instructions {
+      max-width: 600px;
+      margin-bottom: 16px;
+      text-align: center;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <h1>Image Annotator</h1>
+  <p class="instructions">
+    Click four points around the hand (bounding box corners) on the image, choose the number of fingers using the buttons below, then press "Next" to save and move to the next image.
+  </p>
   <canvas id="canvas" width="500" height="500"></canvas>
   <div class="button-container">
     <button id="zeroButton">0</button>

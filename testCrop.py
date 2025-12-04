@@ -5,6 +5,6 @@ import numpy as np
 import albumentations as A
 
 if __name__ == '__main__':
-    image = cv2.imread("data/FULL_IMAGES/test1.jpg")
+    image = cv2.imread("Data/FULL_IMAGES/test1.jpg")
     cropped_image = image[600:1000, 100:350]
-    cv2.imwrite("data/FULL_IMAGES/test1.5.jpg", cropped_image)
+    cv2.imwrite("Data/FULL_IMAGES/test1.5.jpg", cropped_image)

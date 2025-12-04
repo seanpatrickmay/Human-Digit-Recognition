@@ -3,10 +3,10 @@ import os
 import json
 import math
 
-app = Flask(__name__, template_folder="website", static_folder="data/FULL_IMAGES")
+app = Flask(__name__, template_folder="website", static_folder="Data/FULL_IMAGES")
 
 # Directories
-IMAGE_FOLDER = "data/FULL_IMAGES"
+IMAGE_FOLDER = "Data/FULL_IMAGES"
 ANNOTATION_FOLDER = "annotations"
 
 # Ensure the annotation folder exists
